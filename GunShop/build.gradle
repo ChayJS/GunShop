@@ -1,0 +1,33 @@
+buildscript {
+
+    ext {
+        gradle_version = '7.1.0'
+        kotlin_version = "1.6.10"
+        hilt_version = "2.38.1"
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    material_version = "1.5.0"
+    compose_version = "1.2.0-alpha02"
+    compose_activity_version = "1.4.0"
+    compose_hilt_version = "1.0.0-rc01"
+    coroutines_version = "1.5.0"
+    ktx_version = "1.7.0"
+    room_version = "2.4.1"
+}
